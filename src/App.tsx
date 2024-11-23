@@ -6,10 +6,6 @@ function App() {
   const words = ["Construa", "Monte", "Planeje", "Elabore", "Organize", "Crie"];
   const [currentString, setCurrentString] = useState(words[0]);
 
-  const [isSwitchOn, setIsSwitchOn] = useState<boolean>(false);
-
-  const toggleSwitch = (): void => setIsSwitchOn(!isSwitchOn);
-
   useEffect(() => {
     const getRandomString = () => {
       const randomIndex = Math.floor(Math.random() * words.length);
