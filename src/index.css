@@ -1,0 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/abc-ginto-nord-unlicensed-trial');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  align-items: center;
+  background-color: #201f1e;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, #252525 1px, transparent 1px),
+    linear-gradient(to bottom, #252525 1px, transparent 1px)
+}
