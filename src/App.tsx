@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import { TfiSearch } from "react-icons/tfi";
+import Slider from "./components/Slider";
 
 function App() {
-  const words = ["Construa", "Monte", "Planeje"];
+  const words = ["Construa", "Monte", "Planeje", "Elabore", "Organize", "Crie"];
   const [currentString, setCurrentString] = useState(words[0]);
+
+  const [isSwitchOn, setIsSwitchOn] = useState<boolean>(false);
+
+  const toggleSwitch = (): void => setIsSwitchOn(!isSwitchOn);
 
   useEffect(() => {
     const getRandomString = () => {
@@ -35,6 +40,10 @@ function App() {
                   <input className="pl-10 h-12 w-full bg-dark-950 border rounded-md border-zinc-800 outline-none text-zinc-400 text-xs placeholder-zinc-500" placeholder="Engenharia de Alimentos">
 
                   </input>
+                </div>
+                <div className="mt-4">
+                  <label className="text-zinc-300 flex flex-row items-center gap-1 mb-2 text-sm">Você está atualmente blocado?</label>
+                  <Slider/>
                 </div>
             </form>
             <div>
