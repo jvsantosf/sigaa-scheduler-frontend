@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TfiMedall, TfiSearch } from "react-icons/tfi";
+import { TfiSearch } from "react-icons/tfi";
 
 function App() {
   const words = ["Construa", "Monte", "Planeje"];
