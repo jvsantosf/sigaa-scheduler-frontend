@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { RiCheckLine, RiCloseLine } from "react-icons/ri";
 
-function Slider() {
+function Switch() {
     const [ isOn, setIsOn ] = useState<boolean>(true);
-
-    useEffect(() => {
-        console.log(`Está habilitado: ${isOn}`)
-    }, [isOn])
 
     return (
         <div onClick={() => setIsOn(!isOn)} data-toggle={isOn} className="relative inline-flex items-center h-6 w-11 rounded-full cursor-pointer transition-colors duration-100 data-[toggle=false]:bg-rose-500 data-[toggle=true]:bg-emerald-500">
@@ -22,4 +18,4 @@ function Slider() {
     )
 }
 
-export default Slider;
+export default Switch;
